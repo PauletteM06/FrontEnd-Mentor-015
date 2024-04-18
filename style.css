@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    background-color: var(--LightGrayishBlue);
+}
+
+.container {
+    background-color: white;
+    width: 325px;
+    height: 513px;
+    margin: 75px auto;
+    border-radius: 12px;
+    position: relative;
+}
+
+.image {
+    height: 200px;
+    width: 100%;
+    background-image: url(images/drawers.jpg);
+    background-size: cover;
+    background-position-y: -18px;
+    border-radius: 12px 10px 0 0 ;
+}
+
+.title {
+    color: var(--VeryDarkGrayishBlue);
+    margin: 30px 30px 12px;
+    font-size: 1.24em;
+    line-height: 24px;
+}
+
+.description {
+    color: var(--DesaturatedDarkBlue);
+    font-size: 1em;
+    margin: 0 42px 30px 30px;
+    line-height: 20px;
+}
+
+.button {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--LightGrayishBlue);
+    border-radius: 50%;
+    padding: 6px 6px;
+    z-index: 1;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--DesaturatedDarkBlue);
+}
+
+.button:hover path {
+    fill: white;
+}
+
+.michelle-container {
+    display: flex;
+    margin: 0 30px;
+}
+
+.photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.name {
+    color: var(--VeryDarkGrayishBlue);
+    margin: 4px 0 2px 15px;
+    font-weight: 700;
+}
+
+.date {
+    margin-left: 15px;
+    color: var(--GrayishBlue);
+}
+
+.share-icons {
+    background-color: var(--VeryDarkGrayishBlue);
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    display: none;
+    gap: 5px;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    bottom: 0;
+}
+
+.title-share {
+    text-transform: uppercase;
+    color: var(--GrayishBlue);
+    letter-spacing: 4px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.social-icon {
+    margin: 0 8px;
+}
+
+.show {
+    display: flex;
+}
+
+
+/*.......FOOTER...................*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*..........DESKTOP.........*/
+
+@media (min-width: 745px) {
+    .container {
+        margin: 270px auto 75px;
+        width: 735px;
+        height: 280px;
+        display: flex;
+    }
+    .image {
+        height: 100%;
+        background-position-y: unset;
+        border-radius: 12px 0 0 12px;
+    }
+
+    .card-container {
+        padding: 0px 30px 30px 20px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        line-height: 26px;
+    }
+
+    .description {
+        margin-bottom: 20px;
+        font-size: 0.85em;
+    }
+
+    .button {
+        right: 50px;
+        bottom: 30px;
+    }
+
+    .share-icons {
+        width: 250px;
+        height: 56px;
+        bottom: 80px;
+        right: -60px;
+        border-radius: 8px;
+    }
+
+    .share-icons::after {
+        content: "";
+        border: 10px solid;
+        border-color: var(--VeryDarkGrayishBlue) transparent transparent;
+        position: absolute;
+        left: 115px;
+        top: 100%;
+    }
+}
